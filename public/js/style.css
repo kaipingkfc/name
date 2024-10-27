@@ -1,0 +1,161 @@
+body {
+    background-color: #f0f8ff; /* ใส่สีพื้นหลังของทั้งหน้า */
+    font-family: Arial, sans-serif;
+}
+
+/* จัดฟอร์มให้อยู่ตรงกลางทั้งแนวนอนและแนวตั้ง */
+.centered-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* กรอบและเงาของฟอร์ม */
+.form-container {
+    border: 2px solid black;
+    border-radius: 15px; /* โค้งมุม */
+    padding: 60px 20px 40px 20px; /* เพิ่ม padding-top เพื่อเว้นที่สำหรับแถบสีฟ้า */
+    width: 300px; /* กำหนดความกว้าง */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: white; /* พื้นหลังของกล่องฟอร์ม */
+}
+
+/* แถบสีน้ำเงินด้านบน */
+.form-container::before {
+    content: "Student Check-in Form"; /* ข้อความที่ต้องการ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px; /* ความสูงของแถบ */
+    background-color: #87CEEB; /* สีฟ้าอ่อน */
+    color: white; /* สีข้อความ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* ระยะห่างระหว่างฟิลด์ในฟอร์ม */
+.form-container .mb-3 {
+    margin-bottom: 20px; /* เพิ่มระยะห่าง */
+}
+
+/* ปุ่มจัดกึ่งกลาง */
+.form-container button {
+    display: block;
+    margin: 0 auto; /* กึ่งกลางปุ่ม */
+}
+
+/* ตารางในหน้า namestd */
+.table-container {
+    max-width: 100%;
+    overflow-x: auto; /* เพิ่มการเลื่อนในแนวนอนเมื่อหน้าจอแคบ */
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h1 {
+    color: #333;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th {
+    background-color: #87CEEB; /* หัวข้อของตาราง */
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.table-container td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* ปุ่มจัดกว้างเต็มบรรทัดและเพิ่มระยะห่าง */
+.btn-primary {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* ลิงก์ด้านล่าง */
+.text-center a {
+    display: block;
+    margin-top: 10px;
+}
+
+
+.table {
+    width: 100%;
+    table-layout: auto; /* ปล่อยให้ตารางปรับขนาดตามเนื้อหา */
+    border-collapse: collapse;
+}
+
+/* จัดให้ตารางอยู่ตรงกลางและมีพื้นหลังขาว */
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ขอบสีดำของตาราง */
+.table-bordered th,
+.table-bordered td {
+    border: 2px solid black;
+}
+
+/* สีพื้นหลังของหัวข้อ */
+.bg-primary {
+    background-color: #87CEEB !important;
+    color: white;
+    font-weight: bold;
+}
+
+/* สีขอบ */
+.table-bordered {
+    border: 2px solid black;
+}
+
+/* ข้อความในหัวข้อตาราง */
+.table thead th {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ระยะห่างระหว่างแถว */
+.table tbody td {
+    padding: 10px;
+}
+
+
+.table th, .table td {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

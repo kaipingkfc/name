@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Records</title>
+    <!-- ลิงก์ไปยัง Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- ลิงก์ไปยังไฟล์ CSS -->
+    <link href="/js/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Attendance Records</h1>
+    
+    <div class="table-container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="bg-primary text-white">ID</th>
+                    <th class="bg-primary text-white">Name</th>
+                    <th class="bg-primary text-white">Last Name</th>
+                    <th class="bg-primary text-white">Section</th>
+                    <th class="bg-primary text-white">Curriculum (TH)</th>
+                    <th class="bg-primary text-white">Curriculum (EN)</th>
+                    <th class="bg-primary text-white">Short Name (TH)</th>
+                    <th class="bg-primary text-white">Short Name (EN)</th>
+                    <th class="bg-primary text-white">Check-in Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% attendance.forEach(record => { %>
+                    <tr>
+                        <td><%= record.id %></td>
+                        <td><%= record.prefix %> <%= record.first_name %></td>
+                        <td><%= record.last_name %></td>
+                        <td><%= record.section %></td>
+                        <td><%= record.curr_name_th %></td>
+                        <td><%= record.curr_name_en %></td>
+                        <td><%= record.short_name_th %></td>
+                        <td><%= record.short_name_en %></td>
+                        <td><%= new Date(record.checkin_date).toLocaleString('th-TH', { timeZone: 'Asia/Bangkok' }) %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center mt-3">
+        <a href="/" class="btn btn-secondary">Back to Check-in</a>
+    </div>
+</div>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
